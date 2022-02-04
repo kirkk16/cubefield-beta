@@ -1,6 +1,5 @@
 p {
   font-family: 'Raleway';
-  color: black;
 }
 * {
   margin: 0;
@@ -105,7 +104,7 @@ canvas {
   display: block;
   width: 100px;
   height: 150px;
-  margin: 20px 70px;
+  margin: 20px 60px;
   color: white;
   background-color: rgba( 0, 0, 0, 0.3);
   padding: 20px 50px;
