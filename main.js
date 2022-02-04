@@ -202,6 +202,8 @@ init(), animate(), document.addEventListener("resize", e => {
 			rightArrow = !0;
 		} else if (65 == key) {
 			leftArrow = !0;
+		} else if (27 == key) {
+			returnToMenu();
 		} else if (32 == key) {
 			gameReset();
 		} else if (68 == key) {
@@ -227,6 +229,8 @@ init(), animate(), document.addEventListener("resize", e => {
 			rightArrow = !1;
 		} else if (65 == key) {
 			leftArrow = !1;
+		} else if (27 == key) {
+			returnToMenu();
 		} else if (32 == key) {
 			gameReset();
 		} else if (68 == key) {
