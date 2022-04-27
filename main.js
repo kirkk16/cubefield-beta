@@ -4,11 +4,13 @@ var camera, scene, renderer, spotlight, triangle, triEdges, plane, xSpeed, zSpee
     stnBounce = 0,
     stnCam = 0,
     stnBlock = 0,
+    deathCount = 0,
     uiNewGame = document.getElementById("newGame"),
     uiScore = document.getElementById("score"),
     uiHScore = document.getElementById("highScore"),
     uiInfo = document.getElementById("info"),
     uiSettings = document.getElementById("settings"),
+    document.getElementById("deathCount").innerHTML = deathCount,
     uiPause = document.getElementById("pause");
 
 function init() {
@@ -43,6 +45,7 @@ function initStars() {
 function gameReset() {
     for (var c of (uiNewGame.style.visibility = "hidden", uiInfo.style.visibility = "hidden", uiScore.style.color = "#808080", uiScore.style.visibility = "visible", document.body.style.backgroundColor = "#A3A3A3", uiSettings.classList.remove("settingsVis"), document.querySelector("canvas").style.filter = "blur(0px)", document.querySelector("canvas").style.cursor = "none", score = 0, timeElapse = (new Date).getTime(), zOffset = 0, xSpeed = 0, zSpeed = 0, camera.position.z = 0, mCubes)) c.reset(stnBlock, !0, stnDiff);
     for (var s of stars) s.position.z = 5;
+    deathCount += 1;
     var k = Math.PI - this.camera.rotation.z % (2 * Math.PI);
     rotStart = (Math.PI - Math.abs(k)) * Math.sign(k), totalElapse = 0, phase = 1
 }
