@@ -45,7 +45,6 @@ function initStars() {
 function gameReset() {
     for (var c of (uiNewGame.style.visibility = "hidden", uiInfo.style.visibility = "hidden", uiScore.style.color = "#808080", uiScore.style.visibility = "visible", document.body.style.backgroundColor = "#A3A3A3", uiSettings.classList.remove("settingsVis"), document.querySelector("canvas").style.filter = "blur(0px)", document.querySelector("canvas").style.cursor = "none", score = 0, timeElapse = (new Date).getTime(), zOffset = 0, xSpeed = 0, zSpeed = 0, camera.position.z = 0, mCubes)) c.reset(stnBlock, !0, stnDiff);
     for (var s of stars) s.position.z = 5;
-    deathCount += 1;
     var k = Math.PI - this.camera.rotation.z % (2 * Math.PI);
     rotStart = (Math.PI - Math.abs(k)) * Math.sign(k), totalElapse = 0, phase = 1
 }
@@ -147,7 +146,8 @@ function pauseImage(number) {
 }
 	
 function returnToMenu() {
-    uiPause.style.opacity = 0, uiPause.style.visibility = "hidden", logHighscore(), rotOffset = (new Date).getTime() % 5e4, phase = -1, setPreGame()
+    uiPause.style.opacity = 0, uiPause.style.visibility = "hidden", logHighscore(), rotOffset = (new Date).getTime() % 5e4, phase = -1, setPreGame();
+    deathCount += 1;
 }
 
 function updateDiff(target) {
